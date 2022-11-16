@@ -1,0 +1,18 @@
+{
+  "name": "com.outsystems.firebase.cloudmessaging",
+  "version": "1.0.5",
+  "description": "Outsystems plugin for Firebase Cloud Messaging",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "cordova": {
+    "id": "com.outsystems.firebase.cloudmessaging",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "engines": []
+}
