@@ -24,7 +24,7 @@ public class MessagingManager: MessagingProtocol {
     }
     public func getAPNSToken() async throws -> String {
         Data deviceToken = try await Messaging.messaging().apnsToken
-        let tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        let tokenString = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         return tokenString
     }
 
