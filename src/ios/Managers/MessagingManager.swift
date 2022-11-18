@@ -23,10 +23,9 @@ public class MessagingManager: MessagingProtocol {
         return try await Messaging.messaging().token()
     }
     public func getAPNSToken() async throws -> String {
-        let deviceToken: Data?  = try await Messaging.messaging().apnsToken
+        //let deviceToken: Data?  = Messaging.messaging().apnsToken
         ///let tokenString = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        let tokenString = String(decoding: deviceToken, as: UTF8.self)
-        return tokenString
+        return String(decoding: Messaging.messaging().apnsToken, as: UTF8.self)
     }
 
     /// Deletes the Firebase cloud Messaging registration token. The deletion is made asynchronously.
